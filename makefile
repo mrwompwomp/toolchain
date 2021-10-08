@@ -16,7 +16,7 @@
 
 include $(CURDIR)/src/common.mk
 
-LIBS := libload graphx fontlibc keypadc fileioc usbdrvce msddrvce
+LIBS := libload graphx fontlibc keypadc fileioc usbdrvce msddrvce fatdrvce
 
 ifeq ($(OS),Windows_NT)
 RELEASE_CMD :=  cd $(INSTALL_PATH)\ && tar.exe -acf $(CURDIR)/release/$(RELEASE_NAME).zip $(CEDEV_DIR)
