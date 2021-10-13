@@ -544,7 +544,7 @@ typedef unsigned int useconds_t;
  * Currently, no errors are possible.
  *
  * @param usec number of microseconds
- * @return 0 on success, or -1 on error, with ::errno set to indicate the error
+ * @return 0 on success, or -1 on error, with errno set to indicate the error
  * @see delay
  * @see sleep
  * @see useconds_t
@@ -901,7 +901,7 @@ const system_info_t *os_GetSystemInfo(void);
  * This function can return twice (like setjmp).
  * First return always happens with a return value of 0.
  * Second return only happens if an error occurs before os_PopErrorHandler is called,
- * with the errNo as the return value.
+ * with the errno as the return value.
  *
  * @code
  * int errno = os_PushErrorHandler();
