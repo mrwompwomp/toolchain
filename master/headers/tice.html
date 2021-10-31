@@ -1526,22 +1526,102 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv415os_CreateAppVarPKc8uint16_t">
-<span id="_CPPv315os_CreateAppVarPKc8uint16_t"></span><span id="_CPPv215os_CreateAppVarPKc8uint16_t"></span><span id="os_CreateAppVar__cCP.uint16_t"></span><span class="target" id="tice_8h_1a9ed29e2009e191202482ee7334726ffd"></span><a class="reference internal" href="#_CPPv45var_t" title="var_t">var_t</a> *<code class="sig-name descname">os_CreateAppVar</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, uint16_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415os_CreateAppVarPKc8uint16_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Creates an AppVar. </p>
+<dt id="_CPPv415os_CreateStringPKcPK8string_t">
+<span id="_CPPv315os_CreateStringPKcPK8string_t"></span><span id="_CPPv215os_CreateStringPKcPK8string_t"></span><span id="os_CreateString__cCP.string_tCP"></span><span class="target" id="tice_8h_1a4fa7f4de49a50d8ccdaed37e38e68985"></span>int <code class="sig-name descname">os_CreateString</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv48string_t" title="string_t">string_t</a> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415os_CreateStringPKcPK8string_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Creates an TIOS Str. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the Str to create. </p></li>
+<li><p><strong>data</strong> – Initial contents of the created Str. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A TIOS error code, or 0 on success. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv416os_GetStringDataPKcPi">
+<span id="_CPPv316os_GetStringDataPKcPi"></span><span id="_CPPv216os_GetStringDataPKcPi"></span><span id="os_GetStringData__cCP.iP"></span><span class="target" id="tice_8h_1a18d395dd96e8bba359019c16aebc23ab"></span><a class="reference internal" href="#_CPPv48string_t" title="string_t">string_t</a> *<code class="sig-name descname">os_GetStringData</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, int *<em>archived</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416os_GetStringDataPKcPi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets a pointer to an TIOS Str’s data, which may be in archive. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Returns NULL if creation failed for some reason, otherwise a pointer to the size bytes </p>
+<p>Returns NULL if the Str doesn’t exist, otherwise a pointer to the size bytes. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the Str to lookup. </p></li>
+<li><p><strong>archived</strong> – Set to 1 if the Str is archived, otherwise 0, may be NULL if you don’t need it. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A pointer to the Str data </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv417os_CreateEquationPKcPK5equ_t">
+<span id="_CPPv317os_CreateEquationPKcPK5equ_t"></span><span id="_CPPv217os_CreateEquationPKcPK5equ_t"></span><span id="os_CreateEquation__cCP.equ_tCP"></span><span class="target" id="tice_8h_1a8be1023b809c928c0313bf91cf8a4f7d"></span>int <code class="sig-name descname">os_CreateEquation</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv45equ_t" title="equ_t">equ_t</a> *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417os_CreateEquationPKcPK5equ_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Creates a TIOS Equ. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the Equ to create. </p></li>
+<li><p><strong>data</strong> – Initial contents of the created Equ. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A TIOS error code, or 0 on success. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv418os_GetEquationDataPKcPi">
+<span id="_CPPv318os_GetEquationDataPKcPi"></span><span id="_CPPv218os_GetEquationDataPKcPi"></span><span id="os_GetEquationData__cCP.iP"></span><span class="target" id="tice_8h_1a3daa1c0cae7b8deffd21f9e4ffafd424"></span><a class="reference internal" href="#_CPPv45equ_t" title="equ_t">equ_t</a> *<code class="sig-name descname">os_GetEquationData</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, int *<em>archived</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418os_GetEquationDataPKcPi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets a pointer to an TIOS Equ’s data, which may be in archive. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Returns NULL if the Equ doesn’t exist, otherwise a pointer to the size bytes. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the Equ to lookup. </p></li>
+<li><p><strong>archived</strong> – Set to 1 if the Equ is archived, otherwise 0, may be NULL if you don’t need it. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A pointer to the Equ data. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv415os_CreateAppVarPKc8uint16_t">
+<span id="_CPPv315os_CreateAppVarPKc8uint16_t"></span><span id="_CPPv215os_CreateAppVarPKc8uint16_t"></span><span id="os_CreateAppVar__cCP.uint16_t"></span><span class="target" id="tice_8h_1a9ed29e2009e191202482ee7334726ffd"></span><a class="reference internal" href="#_CPPv45var_t" title="var_t">var_t</a> *<code class="sig-name descname">os_CreateAppVar</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, uint16_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415os_CreateAppVarPKc8uint16_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Creates a TIOS AppVar. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Returns NULL if creation failed for some reason, otherwise a pointer to the size bytes. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If successful, the AppVar contents will be uninitialized, aka filled with random bytes. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – Name of the AppVar to create. </p></li>
-<li><p><strong>size</strong> – Size of AppVar to create </p></li>
+<li><p><strong>size</strong> – Size of AppVar to create. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A pointer to the AppVar data </p>
+<dd class="field-even"><p>A pointer to the AppVar data. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1549,10 +1629,10 @@
 <dl class="cpp function">
 <dt id="_CPPv416os_GetAppVarDataPKcPi">
 <span id="_CPPv316os_GetAppVarDataPKcPi"></span><span id="_CPPv216os_GetAppVarDataPKcPi"></span><span id="os_GetAppVarData__cCP.iP"></span><span class="target" id="tice_8h_1a6a6e7fe15135a5bb0c4eb31bf9504e34"></span><a class="reference internal" href="#_CPPv45var_t" title="var_t">var_t</a> *<code class="sig-name descname">os_GetAppVarData</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em>, int *<em>archived</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416os_GetAppVarDataPKcPi" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Gets a pointer to an AppVar’s data, which may be in archive. </p>
+<dd><p>Gets a pointer to a TIOS AppVar’s data, which may be in archive. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Returns NULL if the AppVar doesn’t exist, otherwise a pointer to the size bytes </p>
+<p>Returns NULL if the AppVar doesn’t exist, otherwise a pointer to the size bytes. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1562,7 +1642,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A pointer to the AppVar data </p>
+<dd class="field-even"><p>A pointer to the AppVar data. </p>
 </dd>
 </dl>
 </dd></dl>
