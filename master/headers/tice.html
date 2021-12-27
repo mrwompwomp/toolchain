@@ -2108,6 +2108,10 @@
 <dt id="_CPPv414os_RealComparePK6real_tPK6real_t">
 <span id="_CPPv314os_RealComparePK6real_tPK6real_t"></span><span id="_CPPv214os_RealComparePK6real_tPK6real_t"></span><span id="os_RealCompare__real_tCP.real_tCP"></span><span class="target" id="tice_8h_1ac12d5e48a1c3577d15b33bbfc73790dc"></span>int <code class="sig-name descname">os_RealCompare</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv46real_t" title="real_t">real_t</a> *<em>arg1</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv46real_t" title="real_t">real_t</a> *<em>arg2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414os_RealComparePK6real_tPK6real_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Compares two <a class="reference internal" href="#structreal__t"><span class="std std-ref">real_t</span></a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"></code>{os_RealCompare(arg1, arg2) op 0} computes <code class="docutils literal notranslate"></code>{arg1 op arg2} for any comparison operator <code class="docutils literal notranslate"><span class="pre">op</span></code> </p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2116,7 +2120,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>-1, 0, or 1 depending on the comparison </p>
+<dd class="field-even"><p>-1, 0, or 1 if arg1 is less than, equal to, or greater than arg2 </p>
 </dd>
 </dl>
 </dd></dl>
