@@ -155,8 +155,9 @@ The following code sets up a simple falling edge detector to catch this.</p>
 </div>
 <div class="section" id="getting-getcsc-codes-with-keypadc">
 <h3><a class="toc-backref" href="#id5">Getting GetCSC codes with keypadc</a><a class="headerlink" href="#getting-getcsc-codes-with-keypadc" title="Permalink to this headline"></a></h3>
-<p>This code (written by Jacobly) scans c kb_Data</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span> <span class="nf">get_single_key_pressed</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<p>This code returns the same keycodes that <cite>os_GetCSC()</cite> produces.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// code by jacobly</span>
+<span class="kt">uint8_t</span> <span class="nf">get_single_key_pressed</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">static</span> <span class="kt">uint8_t</span> <span class="n">last_key</span><span class="p">;</span>
     <span class="kt">uint8_t</span> <span class="n">only_key</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">kb_Scan</span><span class="p">();</span>
@@ -198,10 +199,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 <dt id="c.kb_SetMode">
 <span class="target" id="keypadc_8h_1a78a8a521b5502b248979a97e48947345"></span><code class="sig-name descname">kb_SetMode</code><span class="sig-paren">(</span><em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#c.kb_SetMode" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Sets the keypad scanning mode. </p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1af86f29e15b4b14d3aa66ced481a63424"><span class="std std-ref">kb_scan_mode_t</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1af86f29e15b4b14d3aa66ced481a63424"><span class="std std-ref">kb_scan_mode_t</span></a> </p>
+</div>
 </p>
 </dd></dl>
 
@@ -209,10 +210,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 <dt id="c.kb_GetMode">
 <span class="target" id="keypadc_8h_1ad3001e9ec2a0bd6fab1a68680641eb53"></span><code class="sig-name descname">kb_GetMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.kb_GetMode" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Gets the keypad scanning mode. </p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1af86f29e15b4b14d3aa66ced481a63424"><span class="std std-ref">kb_scan_mode_t</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1af86f29e15b4b14d3aa66ced481a63424"><span class="std std-ref">kb_scan_mode_t</span></a> </p>
+</div>
 </p>
 </dd></dl>
 
@@ -363,10 +364,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 </pre></div>
 </div>
 </p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1aefead9ca152e96406af497bb3f7a20e7"><span class="std std-ref">kb_On</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1aefead9ca152e96406af497bb3f7a20e7"><span class="std std-ref">kb_On</span></a> </p>
+</div>
 </p>
 </dd></dl>
 
@@ -374,10 +375,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 <dt id="c.kb_On">
 <span class="target" id="keypadc_8h_1aefead9ca152e96406af497bb3f7a20e7"></span><code class="sig-name descname">kb_On</code><a class="headerlink" href="#c.kb_On" title="Permalink to this definition"></a><br /></dt>
 <dd><p>ON key signal. </p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1ad5e1693dfac50389f67005242a3ebe71"><span class="std std-ref">kb_DisableOnLatch</span></a> <a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch</span></a> <a class="reference internal" href="#keypadc_8h_1ad45ec00dab415b6a0c5256ca8e11609c"><span class="std std-ref">kb_ClearOnLatch</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1ad5e1693dfac50389f67005242a3ebe71"><span class="std std-ref">kb_DisableOnLatch</span></a> <a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch</span></a> <a class="reference internal" href="#keypadc_8h_1ad45ec00dab415b6a0c5256ca8e11609c"><span class="std std-ref">kb_ClearOnLatch</span></a> </p>
+</div>
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -402,10 +403,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 <dt id="c.kb_EnableOnLatch">
 <span class="target" id="keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"></span><code class="sig-name descname">kb_EnableOnLatch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.kb_EnableOnLatch" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Causes kb_On to latch when the ON is key pressed: once the ON key is pressed, kb_On will remain true until reset with <a class="reference internal" href="#keypadc_8h_1ad45ec00dab415b6a0c5256ca8e11609c"><span class="std std-ref">kb_ClearOnLatch()</span></a>. </p>
-<p>This may be useful if you want to check the ON key occasionally, for example as a break signal. <dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1ad5e1693dfac50389f67005242a3ebe71"><span class="std std-ref">kb_DisableOnLatch</span></a> <a class="reference internal" href="#keypadc_8h_1ad45ec00dab415b6a0c5256ca8e11609c"><span class="std std-ref">kb_ClearOnLatch</span></a> </p>
-</dd>
-</dl>
+<p>This may be useful if you want to check the ON key occasionally, for example as a break signal. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1ad5e1693dfac50389f67005242a3ebe71"><span class="std std-ref">kb_DisableOnLatch</span></a> <a class="reference internal" href="#keypadc_8h_1ad45ec00dab415b6a0c5256ca8e11609c"><span class="std std-ref">kb_ClearOnLatch</span></a> </p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -417,10 +418,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 <dt id="c.kb_DisableOnLatch">
 <span class="target" id="keypadc_8h_1ad5e1693dfac50389f67005242a3ebe71"></span><code class="sig-name descname">kb_DisableOnLatch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.kb_DisableOnLatch" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Disables ON key latching behavior. </p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch</span></a> </p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -432,10 +433,10 @@ The following code sets up a simple falling edge detector to catch this.</p>
 <dt id="c.kb_ClearOnLatch">
 <span class="target" id="keypadc_8h_1ad45ec00dab415b6a0c5256ca8e11609c"></span><code class="sig-name descname">kb_ClearOnLatch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.kb_ClearOnLatch" title="Permalink to this definition"></a><br /></dt>
 <dd><p>When ON key latching has been enabled with <a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch()</span></a>, this will reset kb_On back to false (assuming the user is no longer pressing ON). </p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypadc_8h_1a2fa5f7d791ab9995e5b7045a49fde25d"><span class="std std-ref">kb_EnableOnLatch</span></a> </p>
+</div>
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
