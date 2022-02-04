@@ -129,19 +129,24 @@ This is a limitation of the <code class="code docutils literal notranslate"><spa
 <h2>Building Programs<a class="headerlink" href="#building-programs" title="Permalink to this headline"></a></h2>
 <p>Programs are built with the <code class="code docutils literal notranslate"><span class="pre">make</span></code> command, executed from a terminal session.
 This tutorial explains how to use the CE C Toolchain to build programs using <code class="code docutils literal notranslate"><span class="pre">make</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>On Windows, you may need to install the latest Microsoft Visual C++ Redistributable package if you encounter errors such as <code class="code docutils literal notranslate"><span class="pre">Missing</span> <span class="pre">vcruntime140.dll</span></code>.
-The download can be found <a class="reference external" href="https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0">at this link</a>, depending on your computer you will need to install one of <em>vc_redist.x86.exe</em>, <em>vc_redist.x64.exe</em>, or <em>vc_redist.arm64.exe</em>.</p>
-<p>Additionally, your antivirus software (e.g. Windows Defender) may flag binaries in the <code class="code docutils literal notranslate"><span class="pre">CEdev/bin</span></code> directory as false positives, and either quarantine the files or prevent them from running.
-It is recommended you whitelist or disable scanning in <code class="code docutils literal notranslate"><span class="pre">CEdev/bin</span></code> to prevent these false positives from occurring.</p>
-</div>
-<p>Locate the installed <cite>CEdev</cite> folder, and open a session by double-clicking <code class="code docutils literal notranslate"><span class="pre">cedev.bat</span></code> on Windows or launching your favorite terminal on Linux/macOS.
+<p>Locate the installed <cite>CEdev</cite> folder, and open a build session by double-clicking <code class="code docutils literal notranslate"><span class="pre">cedev.bat</span></code> on Windows or launching your favorite terminal on Linux/macOS.
 Navigate to the <cite>examples</cite> folder using the <code class="code docutils literal notranslate"><span class="pre">cd</span> <span class="pre">examples</span></code> command.
 This folder contains example projects that you can build and modify to learn how to write CE C programs.
 Navigate the to the <cite>hello_world</cite> example inside this folder using the command <code class="code docutils literal notranslate"><span class="pre">cd</span> <span class="pre">hello_world</span></code>.</p>
 <p>Type <code class="code docutils literal notranslate"><span class="pre">make</span></code> and press enter.
-This command invokes the compiler and creates a file called <code class="code docutils literal notranslate"><span class="pre">bin/DEMO.8xp</span></code>, which stores the program’s machine code.</p>
+This command invokes the compiler, assembler, and linker creating the file <code class="code docutils literal notranslate"><span class="pre">bin/DEMO.8xp</span></code>.
+The file stores the machine code of the program in a format fit for the calculator.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Windows, you may need to install the latest Microsoft Visual C++ Redistributable package if you encounter errors such as <code class="code docutils literal notranslate"><span class="pre">Missing</span> <span class="pre">vcruntime140.dll</span></code>.
+The download can be found <a class="reference external" href="https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0">at this link</a>, depending on your computer you will need to install one of <em>vc_redist.x86.exe</em>, <em>vc_redist.x64.exe</em>, or <em>vc_redist.arm64.exe</em>.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>On Windows, your antivirus software (e.g. Windows Defender) may flag binaries in the <code class="code docutils literal notranslate"><span class="pre">CEdev/bin</span></code> directory as false positives, and either quarantine/remove the files or prevent them from running.
+This may result in errors such as being unable find/run the <cite>fasmg</cite> program when building.
+It is recommended you whitelist or disable scanning in <code class="code docutils literal notranslate"><span class="pre">CEdev/bin</span></code> to prevent these false positives from occurring.</p>
+</div>
 <p>The <a class="reference external" href="https://ce-programming.github.io/CEmu">CEmu</a> emulator can be used to run the program, or you can transfer it to a real calculator using the cross-platform <a class="reference external" href="https://education.ti.com/en/us/products/computer_software/connectivity-software/ti-connect-ce-software/tabs/overview">TI Connect CE</a>.</p>
 <div class="figure align-center" id="id2">
 <img alt="Building the Hello World example" src="../_images/hello_world.png" />
