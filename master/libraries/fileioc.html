@@ -346,13 +346,15 @@ Additionally, the library supports accessing program data and various OS variabl
 
 <dl class="cpp function">
 <dt id="_CPPv49ti_DetectPPvPKc">
-<span id="_CPPv39ti_DetectPPvPKc"></span><span id="_CPPv29ti_DetectPPvPKc"></span><span id="ti_Detect__voidPP.cCP"></span><span class="target" id="fileioc_8h_1a8ab3898aa9f1d56ebf783816e3ce0e17"></span>char *<code class="sig-name descname">ti_Detect</code><span class="sig-paren">(</span>void **<em>curr_search_posistion</em>, <em class="property">const</em> char *<em>detection_string</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49ti_DetectPPvPKc" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable; which can then be used with ti_Open and other functions. </p>
-<p><code class="docutils literal notranslate"><span class="pre">search_pos</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
+<span id="_CPPv39ti_DetectPPvPKc"></span><span id="_CPPv29ti_DetectPPvPKc"></span><span id="ti_Detect__voidPP.cCP"></span><span class="target" id="fileioc_8h_1a3eb3a40940d1e91538bea1603566c7a7"></span>char *<code class="sig-name descname">ti_Detect</code><span class="sig-paren">(</span>void **<em>vat_ptr</em>, <em class="property">const</em> char *<em>detect_string</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49ti_DetectPPvPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable, which can then be used with <a class="reference internal" href="#fileioc_8h_1a2842e9d72ce53bca7b41c22838881775"><span class="std std-ref">ti_Open()</span></a> and other functions. </p>
+<p><code class="docutils literal notranslate"><span class="pre">vat_ptr</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
 <p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="o">*</span><span class="n">search_pos</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
-<span class="k">while</span><span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_Detect</span><span class="p">(</span><span class="o">&amp;</span><span class="n">search_pos</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">))</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">search_pos</span><span class="o">...</span>
+<span class="n">void</span> <span class="o">*</span><span class="n">vat_ptr</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_Detect</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vat_ptr</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">)))</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">var_name</span> <span class="ow">or</span> <span class="n">vat_ptr</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -364,8 +366,8 @@ Additionally, the library supports accessing program data and various OS variabl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curr_search_posistion</strong> – Current offset in the VAT. </p></li>
-<li><p><strong>detection_string</strong> – String to search for (NULL to search for all). </p></li>
+<li><p><strong>vat_ptr</strong> – Current offset in the VAT. </p></li>
+<li><p><strong>detect_string</strong> – String to search for (NULL to search for all). </p></li>
 </ul>
 </dd>
 </dl>
@@ -373,13 +375,15 @@ Additionally, the library supports accessing program data and various OS variabl
 
 <dl class="cpp function">
 <dt id="_CPPv412ti_DetectVarPPvPKc7uint8_t">
-<span id="_CPPv312ti_DetectVarPPvPKc7uint8_t"></span><span id="_CPPv212ti_DetectVarPPvPKc7uint8_t"></span><span id="ti_DetectVar__voidPP.cCP.uint8_t"></span><span class="target" id="fileioc_8h_1aaa4c5a6c019de1510fac2a6bfa9269c7"></span>char *<code class="sig-name descname">ti_DetectVar</code><span class="sig-paren">(</span>void **<em>curr_search_posistion</em>, <em class="property">const</em> char *<em>detection_string</em>, uint8_t <em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectVarPPvPKc7uint8_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable; which can then be used with ti_OpenVar and other functions. </p>
-<p><code class="docutils literal notranslate"><span class="pre">search_pos</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
+<span id="_CPPv312ti_DetectVarPPvPKc7uint8_t"></span><span id="_CPPv212ti_DetectVarPPvPKc7uint8_t"></span><span id="ti_DetectVar__voidPP.cCP.uint8_t"></span><span class="target" id="fileioc_8h_1a9af05d2d65bd09cd9180cb70bce748ca"></span>char *<code class="sig-name descname">ti_DetectVar</code><span class="sig-paren">(</span>void **<em>vat_ptr</em>, <em class="property">const</em> char *<em>detect_string</em>, uint8_t <em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectVarPPvPKc7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable, which can then be used with <a class="reference internal" href="#fileioc_8h_1a75e6644985670553ff3e479d61ec788b"><span class="std std-ref">ti_OpenVar()</span></a> and other functions. </p>
+<p><code class="docutils literal notranslate"><span class="pre">vat_ptr</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
 <p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="o">*</span><span class="n">search_pos</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
-<span class="k">while</span><span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectVar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">search_pos</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="n">TI_PRGM_TYPE</span><span class="p">))</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">search_pos</span><span class="o">...</span>
+<span class="n">void</span> <span class="o">*</span><span class="n">vat_ptr</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectVar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vat_ptr</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="n">TI_PRGM_TYPE</span><span class="p">)))</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">var_name</span> <span class="ow">or</span> <span class="n">vat_ptr</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -391,8 +395,8 @@ Additionally, the library supports accessing program data and various OS variabl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curr_search_posistion</strong> – Current offset in the VAT. </p></li>
-<li><p><strong>detection_string</strong> – String to search for (NULL to search for all). </p></li>
+<li><p><strong>vat_ptr</strong> – Current offset in the VAT. </p></li>
+<li><p><strong>detect_string</strong> – String to search for (NULL to search for all). </p></li>
 <li><p><strong>var_type</strong> – Type of variable to detect. </p></li>
 </ul>
 </dd>
@@ -401,16 +405,19 @@ Additionally, the library supports accessing program data and various OS variabl
 
 <dl class="cpp function">
 <dt id="_CPPv412ti_DetectAnyPPvPKcP7uint8_t">
-<span id="_CPPv312ti_DetectAnyPPvPKcP7uint8_t"></span><span id="_CPPv212ti_DetectAnyPPvPKcP7uint8_t"></span><span id="ti_DetectAny__voidPP.cCP.uint8_tP"></span><span class="target" id="fileioc_8h_1a73c135a7580238aef96113a589b5dd42"></span>char *<code class="sig-name descname">ti_DetectAny</code><span class="sig-paren">(</span>void **<em>curr_search_posistion</em>, <em class="property">const</em> char *<em>detection_string</em>, uint8_t *<em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectAnyPPvPKcP7uint8_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable; which can then be used with ti_OpenVar and other functions. </p>
-<p><code class="docutils literal notranslate"><span class="pre">search_pos</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
-<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="o">*</span><span class="n">search_pos</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="nb">type</span><span class="p">;</span>
-<span class="k">while</span><span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectAny</span><span class="p">(</span><span class="o">&amp;</span><span class="n">search_pos</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nb">type</span><span class="p">))</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">type</span> <span class="o">==</span> <span class="n">TI_PRGM_TYPE</span> <span class="o">||</span> <span class="nb">type</span> <span class="o">==</span> <span class="n">TI_PPRGM_TYPE</span><span class="p">)</span> <span class="p">{</span>
-   <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">search_pos</span><span class="o">...</span>
-  <span class="p">}</span>
+<span id="_CPPv312ti_DetectAnyPPvPKcP7uint8_t"></span><span id="_CPPv212ti_DetectAnyPPvPKcP7uint8_t"></span><span id="ti_DetectAny__voidPP.cCP.uint8_tP"></span><span class="target" id="fileioc_8h_1a790c564959b303bb05595dee8043789a"></span>char *<code class="sig-name descname">ti_DetectAny</code><span class="sig-paren">(</span>void **<em>vat_ptr</em>, <em class="property">const</em> char *<em>detect_string</em>, uint8_t *<em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectAnyPPvPKcP7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable, which can then be used with <a class="reference internal" href="#fileioc_8h_1a75e6644985670553ff3e479d61ec788b"><span class="std std-ref">ti_OpenVar()</span></a> and other functions. </p>
+<p><code class="docutils literal notranslate"><span class="pre">vat_ptr</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uint8_t</span> <span class="n">var_type</span><span class="p">;</span>
+<span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
+<span class="n">void</span> <span class="o">*</span><span class="n">vat_ptr</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectAny</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vat_ptr</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var_type</span><span class="p">)))</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">var_type</span> <span class="o">==</span> <span class="n">TI_PRGM_TYPE</span> <span class="o">||</span> <span class="n">var_type</span> <span class="o">==</span> <span class="n">TI_PPRGM_TYPE</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">var_name</span> <span class="ow">or</span> <span class="n">vat_ptr</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -422,8 +429,8 @@ Additionally, the library supports accessing program data and various OS variabl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curr_search_posistion</strong> – Current offset in the VAT. </p></li>
-<li><p><strong>detection_string</strong> – String to search for (NULL to search for all). </p></li>
+<li><p><strong>vat_ptr</strong> – Current offset in the VAT. </p></li>
+<li><p><strong>detect_string</strong> – String to search for (NULL to search for all). </p></li>
 <li><p><strong>var_type</strong> – Type of variable found. </p></li>
 </ul>
 </dd>
