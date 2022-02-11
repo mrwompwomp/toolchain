@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>graphx.h &mdash; CE C Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>graphx.h &mdash; CE C/C++ Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> CE C Toolchain
+            <a href="../index.html" class="icon icon-home"> CE C/C++ Toolchain
           </a>
               <div class="version">
                 v9.2
@@ -40,7 +40,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C Toolchain!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C/C++ Toolchain!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/getting-started.html">Getting Started</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Helpful Information</span></p>
@@ -53,7 +53,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../static/printf.html">Using printf Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/fileio.html">Using File I/O Functions</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">CE C Libraries</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CE Libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="fileioc.html">fileioc.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fontlibc.html">fontlibc.h</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">graphx.h</a><ul>
@@ -80,13 +80,13 @@
 <li class="toctree-l2"><a class="reference internal" href="keypadc.html">keypadc.h</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE C Toolchain Specific Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE Toolchain Specific Headers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/makefile-options.html">Makefile Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../static/contributing.html">Contributing to the CE C Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static/contributing.html">Contributing to the CE Toolchain</a></li>
 </ul>
 
         </div>
@@ -95,7 +95,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">CE C Toolchain</a>
+          <a href="../index.html">CE C/C++ Toolchain</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -103,7 +103,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">CE C Libraries</a> &raquo;</li>
+          <li><a href="index.html">CE Libraries</a> &raquo;</li>
       <li>graphx.h</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -176,7 +176,7 @@ For example, in a simple Pong game, if a white ball is drawn on a black backgrou
 <p>A brief summation of the paritial redraw using graphx is:</p>
 <ul class="simple">
 <li><p>Allocate space for a temporary sprite.</p></li>
-<li><p>When the background is drawn, a small copy of it is saved to the temporary spirte.</p></li>
+<li><p>When the background is drawn, a small copy of it is saved to the temporary sprite.</p></li>
 <li><p>After the background is drawn, the sprite is drawn as normal.</p></li>
 <li><p>Upon movement, the sprite is erased using the temporary sprite and the coordinates are updated.</p></li>
 <li><p>The section of background with the updated coordinates is stored to the temporary sprite and the process repeated.</p></li>
@@ -380,7 +380,7 @@ void main() {
 <p>Declares a <code class="docutils literal notranslate"><a class="reference internal" href="#structgfx__sprite__t"><span class="std std-ref"><span class="pre">gfx_sprite_t</span></span></a> <span class="pre">*</span></code> with the given <code class="docutils literal notranslate"><span class="pre">name</span></code> pointing to the allocated memory. <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> will <strong>not</strong> be set in the sprite, unlike <a class="reference internal" href="#graphx_8h_1ad95d6ddd408bb6c0fad041353da0d7ea"><span class="std std-ref">gfx_TempSprite()</span></a>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#graphx_8h_1add09e11cb2d5b761ea1b336c07d9283e"><span class="std std-ref">gfx_MallocSprite</span></a> </p>
+<p><a class="reference internal" href="#graphx_8h_1add09e11cb2d5b761ea1b336c07d9283e"><span class="std std-ref">gfx_MallocSprite()</span></a> </p>
 </div>
 </p>
 <div class="admonition warning">
@@ -405,7 +405,7 @@ void main() {
 <p>Declares a <code class="docutils literal notranslate"><a class="reference internal" href="#structgfx__sprite__t"><span class="std std-ref"><span class="pre">gfx_sprite_t</span></span></a> <span class="pre">*</span></code> with the given <code class="docutils literal notranslate"><span class="pre">name</span></code> pointing to the allocated memory. <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> will be set in the sprite, unlike <a class="reference internal" href="#graphx_8h_1aec1bf1b311dee9f387931b37db5ec5f0"><span class="std std-ref">gfx_UninitedSprite()</span></a>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#graphx_8h_1add09e11cb2d5b761ea1b336c07d9283e"><span class="std std-ref">gfx_MallocSprite</span></a> </p>
+<p><a class="reference internal" href="#graphx_8h_1add09e11cb2d5b761ea1b336c07d9283e"><span class="std std-ref">gfx_MallocSprite()</span></a> </p>
 </div>
 <dl class="simple">
 <dt><strong>Attention</strong></dt><dd><p>Due to <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> being set, the memory will be allocated in the initialized data segment. If the compiled program is not compressed, then this could be a serious source of bloat and <a class="reference internal" href="#graphx_8h_1aec1bf1b311dee9f387931b37db5ec5f0"><span class="std std-ref">gfx_UninitedSprite()</span></a> should be preferred.</p>
@@ -463,7 +463,7 @@ void main() {
 <p><code class="docutils literal notranslate"><span class="pre">data_size</span></code> is the size to allocate for sprite data; see <a class="reference internal" href="#graphx_8h_1aca06f205639068645997ae2850d9330c"><span class="std std-ref">gfx_AllocRLETSprite()</span></a> for information. Returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code> upon allocation failure.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#graphx_8h_1aca06f205639068645997ae2850d9330c"><span class="std std-ref">gfx_AllocRLETSprite</span></a> </p>
+<p><a class="reference internal" href="#graphx_8h_1aca06f205639068645997ae2850d9330c"><span class="std std-ref">gfx_AllocRLETSprite()</span></a> </p>
 </div>
 </p>
 <div class="admonition note">
@@ -489,7 +489,7 @@ void main() {
 <p>Declares a <code class="docutils literal notranslate"><a class="reference internal" href="#structgfx__rletsprite__t"><span class="std std-ref"><span class="pre">gfx_rletsprite_t</span></span></a> <span class="pre">*</span></code> with the given <code class="docutils literal notranslate"><span class="pre">name</span></code> pointing to the allocated memory. <code class="docutils literal notranslate"><span class="pre">data_size</span></code> is the size to allocate for sprite data; see <a class="reference internal" href="#graphx_8h_1aca06f205639068645997ae2850d9330c"><span class="std std-ref">gfx_AllocRLETSprite()</span></a> for information.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#graphx_8h_1a17a6151634015179913865b858de8d4f"><span class="std std-ref">gfx_MallocRLETSprite</span></a> </p>
+<p><a class="reference internal" href="#graphx_8h_1a17a6151634015179913865b858de8d4f"><span class="std std-ref">gfx_MallocRLETSprite()</span></a> </p>
 </div>
 </p>
 <div class="admonition warning">

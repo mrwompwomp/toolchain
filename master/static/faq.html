@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frequently Asked Questions &mdash; CE C Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Frequently Asked Questions &mdash; CE C/C++ Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> CE C Toolchain
+            <a href="../index.html" class="icon icon-home"> CE C/C++ Toolchain
           </a>
               <div class="version">
                 master
@@ -40,14 +40,15 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C Toolchain!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C/C++ Toolchain!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Helpful Information</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#i-found-a-bug-help">I Found A Bug, Help!?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#what-is-the-c-runtime-memory-layout">What is the C Runtime Memory Layout?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-versions-of-c-c-are-supported">What versions of C/C++ are supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-c-c-runtime-memory-layout">What is the C/C++ Runtime Memory Layout?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-can-i-use-fasmg-on-a-non-x86-processor">How can I use fasmg on a non-x86 processor?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#linking-assembly-source-files">Linking Assembly Source Files</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a></li>
@@ -63,14 +64,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="printf.html">Using printf Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileio.html">Using File I/O Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">CE C Libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE C Toolchain Specific Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">CE Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE Toolchain Specific Headers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makefile-options.html">Makefile Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the CE C Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the CE Toolchain</a></li>
 </ul>
 
         </div>
@@ -79,7 +80,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">CE C Toolchain</a>
+          <a href="../index.html">CE C/C++ Toolchain</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -103,8 +104,12 @@
 <p>Nice work, now create an <a class="reference external" href="https://github.com/CE-Programming/toolchain/issues">issue report here</a> with details on what caused the crash.
 Uploading a zip of your code and/or a minimal reproducible example is very appreciated, and will make bug fixes faster.</p>
 </div>
-<div class="section" id="what-is-the-c-runtime-memory-layout">
-<h2>What is the C Runtime Memory Layout?<a class="headerlink" href="#what-is-the-c-runtime-memory-layout" title="Permalink to this headline"></a></h2>
+<div class="section" id="what-versions-of-c-c-are-supported">
+<h2>What versions of C/C++ are supported?<a class="headerlink" href="#what-versions-of-c-c-are-supported" title="Permalink to this headline"></a></h2>
+<p>The CE Toolchain supports the latest LLVM/Clang toolchain, and the status of each language can be found at the respective links: <a class="reference external" href="https://clang.llvm.org/c_status.html">C</a>, <a class="reference external" href="https://clang.llvm.org/cxx_status.html">C++</a></p>
+</div>
+<div class="section" id="what-is-the-c-c-runtime-memory-layout">
+<h2>What is the C/C++ Runtime Memory Layout?<a class="headerlink" href="#what-is-the-c-c-runtime-memory-layout" title="Permalink to this headline"></a></h2>
 <p>The CE has a limited amount of memory.</p>
 <ul class="simple">
 <li><p>The stack is roughly 4KiB.</p></li>
@@ -135,10 +140,10 @@ Now, fasmg will execute in user mode under QEMU, allowing it to successfully com
 </div>
 <div class="section" id="linking-assembly-source-files">
 <h2>Linking Assembly Source Files<a class="headerlink" href="#linking-assembly-source-files" title="Permalink to this headline"></a></h2>
-<p>Assembly routines can be linked into a C program provided the following conditions are met:</p>
+<p>Assembly routines can be linked into a C/C++ program provided the following conditions are met:</p>
 <ul class="simple">
 <li><p>The file’s extension is <strong>.asm</strong>. It can be placed at any depth in the sources directory.</p></li>
-<li><p>The routine should have a C prototype if it used externally in C.</p></li>
+<li><p>The routine should have a C/C++ prototype if it used externally.</p></li>
 <li><p>The assembly routine must be prefixed with an underscore, and have a corresponding <cite>public</cite> entry in the assembly file.</p></li>
 <li><p>Any external functions called from the assembly source must be listed as being <cite>extern</cite>.</p></li>
 </ul>

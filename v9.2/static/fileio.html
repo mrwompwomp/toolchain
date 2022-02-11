@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using File I/O Functions &mdash; CE C Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Using File I/O Functions &mdash; CE C/C++ Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -16,7 +16,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CE C Libraries" href="../libraries/index.html" />
+    <link rel="next" title="CE Libraries" href="../libraries/index.html" />
     <link rel="prev" title="Using printf Functions" href="printf.html" /> 
 </head>
 
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> CE C Toolchain
+            <a href="../index.html" class="icon icon-home"> CE C/C++ Toolchain
           </a>
               <div class="version">
                 v9.2
@@ -40,7 +40,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C Toolchain!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C/C++ Toolchain!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Helpful Information</span></p>
@@ -57,14 +57,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-custom-file-i-o">Using Custom File I/O</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">CE C Libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE C Toolchain Specific Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">CE Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE Toolchain Specific Headers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makefile-options.html">Makefile Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the CE C Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the CE Toolchain</a></li>
 </ul>
 
         </div>
@@ -73,7 +73,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">CE C Toolchain</a>
+          <a href="../index.html">CE C/C++ Toolchain</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -97,7 +97,7 @@
 <p>File I/O functions are any of the standard <cite>fopen</cite>, <cite>fgets</cite>, <cite>fread</cite>, and related file functions.
 These functions are meant to perform OS-level file access for reading and writing.
 However, the CE doesn’t expose any sort of standard UNIX or similar file capabilities.</p>
-<p>To mitigate this, the CE C Toolchain includes these functions as wrappers around the <a class="reference internal" href="../libraries/fileioc.html#fileioc-h"><span class="std std-ref">fileioc library</span></a>.
+<p>To mitigate this, the CE Toolchain includes these functions as wrappers around the <a class="reference internal" href="../libraries/fileioc.html#fileioc-h"><span class="std std-ref">fileioc library</span></a>.
 This allows native access to AppVars for read and write operations.</p>
 <p>For <code class="code docutils literal notranslate"><span class="pre">stdin</span></code>, <code class="code docutils literal notranslate"><span class="pre">stdout</span></code>, and <code class="code docutils literal notranslate"><span class="pre">stderr</span></code> file streams, the default implementation uses the <cite>getchar</cite> and <cite>putchar</cite> functions respectively.</p>
 </div>
@@ -140,7 +140,7 @@ Additionally, it should redefine <code class="code docutils literal notranslate"
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="printf.html" class="btn btn-neutral float-left" title="Using printf Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../libraries/index.html" class="btn btn-neutral float-right" title="CE C Libraries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../libraries/index.html" class="btn btn-neutral float-right" title="CE Libraries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

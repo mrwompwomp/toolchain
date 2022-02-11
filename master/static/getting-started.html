@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; CE C Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Getting Started &mdash; CE C/C++ Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Frequently Asked Questions" href="faq.html" />
-    <link rel="prev" title="Welcome to the CE C Toolchain!" href="../index.html" /> 
+    <link rel="prev" title="Welcome to the CE C/C++ Toolchain!" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> CE C Toolchain
+            <a href="../index.html" class="icon icon-home"> CE C/C++ Toolchain
           </a>
               <div class="version">
                 master
@@ -40,9 +40,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Overview</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C Toolchain!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C/C++ Toolchain!</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-the-ce-c-toolchain">Installing the CE C toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-ce-toolchain">Installing the CE Toolchain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-programs">Building Programs</a></li>
 </ul>
 </li>
@@ -57,14 +57,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="printf.html">Using printf Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileio.html">Using File I/O Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">CE C Libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE C Toolchain Specific Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">CE Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE Toolchain Specific Headers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makefile-options.html">Makefile Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the CE C Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the CE Toolchain</a></li>
 </ul>
 
         </div>
@@ -73,7 +73,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">CE C Toolchain</a>
+          <a href="../index.html">CE C/C++ Toolchain</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -92,8 +92,8 @@
              
   <div class="section" id="getting-started">
 <span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
-<div class="section" id="installing-the-ce-c-toolchain">
-<h2>Installing the CE C toolchain<a class="headerlink" href="#installing-the-ce-c-toolchain" title="Permalink to this headline"></a></h2>
+<div class="section" id="installing-the-ce-toolchain">
+<h2>Installing the CE Toolchain<a class="headerlink" href="#installing-the-ce-toolchain" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Download the file prefixed with your OS type from <a class="reference external" href="https://github.com/CE-Programming/toolchain/releases/latest">here</a>.</p></li>
 <li><p>Extract the zip archive to a path <strong>without any spaces in it</strong>.</p></li>
@@ -128,10 +128,10 @@ This is a limitation of the <code class="code docutils literal notranslate"><spa
 <div class="section" id="building-programs">
 <h2>Building Programs<a class="headerlink" href="#building-programs" title="Permalink to this headline"></a></h2>
 <p>Programs are built with the <code class="code docutils literal notranslate"><span class="pre">make</span></code> command, executed from a terminal session.
-This tutorial explains how to use the CE C Toolchain to build programs using <code class="code docutils literal notranslate"><span class="pre">make</span></code>.</p>
+This tutorial explains how to use the CE Toolchain to build programs using <code class="code docutils literal notranslate"><span class="pre">make</span></code>.</p>
 <p>Locate the installed <cite>CEdev</cite> folder, and open a build session by double-clicking <code class="code docutils literal notranslate"><span class="pre">cedev.bat</span></code> on Windows or launching your favorite terminal on Linux/macOS.
 Navigate to the <cite>examples</cite> folder using the <code class="code docutils literal notranslate"><span class="pre">cd</span> <span class="pre">examples</span></code> command.
-This folder contains example projects that you can build and modify to learn how to write CE C programs.
+This folder contains example projects that you can build and modify to learn how to write various programs.
 Navigate the to the <cite>hello_world</cite> example inside this folder using the command <code class="code docutils literal notranslate"><span class="pre">cd</span> <span class="pre">hello_world</span></code>.</p>
 <p>Type <code class="code docutils literal notranslate"><span class="pre">make</span></code> and press enter.
 This command invokes the compiler, assembler, and linker creating the file <code class="code docutils literal notranslate"><span class="pre">bin/DEMO.8xp</span></code>.
@@ -152,7 +152,7 @@ It is recommended you whitelist or disable scanning in <code class="code docutil
 <img alt="Building the Hello World example" src="../_images/hello_world.png" />
 <p class="caption"><span class="caption-text">Building the Hello World example</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </div>
-<p>Each CE C Toolchain project has the following folder structure:</p>
+<p>Each CE Toolchain project has the following folder structure:</p>
 <ul class="simple">
 <li><p><strong>src</strong></p>
 <ul>
@@ -201,7 +201,7 @@ It is recommended you whitelist or disable scanning in <code class="code docutil
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to the CE C Toolchain!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to the CE C/C++ Toolchain!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

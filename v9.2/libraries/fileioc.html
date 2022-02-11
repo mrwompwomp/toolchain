@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fileioc.h &mdash; CE C Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>fileioc.h &mdash; CE C/C++ Toolchain  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="fontlibc.h" href="fontlibc.html" />
-    <link rel="prev" title="CE C Libraries" href="index.html" /> 
+    <link rel="prev" title="CE Libraries" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> CE C Toolchain
+            <a href="../index.html" class="icon icon-home"> CE C/C++ Toolchain
           </a>
               <div class="version">
                 v9.2
@@ -40,7 +40,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C Toolchain!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the CE C/C++ Toolchain!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/getting-started.html">Getting Started</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Helpful Information</span></p>
@@ -53,7 +53,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../static/printf.html">Using printf Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/fileio.html">Using File I/O Functions</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">CE C Libraries</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CE Libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">fileioc.h</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#api-documentation">API Documentation</a></li>
 </ul>
@@ -63,13 +63,13 @@
 <li class="toctree-l2"><a class="reference internal" href="keypadc.html">keypadc.h</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE C Toolchain Specific Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../headers/index.html">CE Toolchain Specific Headers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../static/makefile-options.html">Makefile Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../static/contributing.html">Contributing to the CE C Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static/contributing.html">Contributing to the CE Toolchain</a></li>
 </ul>
 
         </div>
@@ -78,7 +78,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">CE C Toolchain</a>
+          <a href="../index.html">CE C/C++ Toolchain</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -86,7 +86,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">CE C Libraries</a> &raquo;</li>
+          <li><a href="index.html">CE Libraries</a> &raquo;</li>
       <li>fileioc.h</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -346,13 +346,15 @@ Additionally, the library supports accessing program data and various OS variabl
 
 <dl class="cpp function">
 <dt id="_CPPv49ti_DetectPPvPKc">
-<span id="_CPPv39ti_DetectPPvPKc"></span><span id="_CPPv29ti_DetectPPvPKc"></span><span id="ti_Detect__voidPP.cCP"></span><span class="target" id="fileioc_8h_1a8ab3898aa9f1d56ebf783816e3ce0e17"></span>char *<code class="sig-name descname">ti_Detect</code><span class="sig-paren">(</span>void **<em>curr_search_posistion</em>, <em class="property">const</em> char *<em>detection_string</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49ti_DetectPPvPKc" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable; which can then be used with ti_Open and other functions. </p>
-<p><code class="docutils literal notranslate"><span class="pre">search_pos</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
+<span id="_CPPv39ti_DetectPPvPKc"></span><span id="_CPPv29ti_DetectPPvPKc"></span><span id="ti_Detect__voidPP.cCP"></span><span class="target" id="fileioc_8h_1a3eb3a40940d1e91538bea1603566c7a7"></span>char *<code class="sig-name descname">ti_Detect</code><span class="sig-paren">(</span>void **<em>vat_ptr</em>, <em class="property">const</em> char *<em>detect_string</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49ti_DetectPPvPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable, which can then be used with <a class="reference internal" href="#fileioc_8h_1a2842e9d72ce53bca7b41c22838881775"><span class="std std-ref">ti_Open()</span></a> and other functions. </p>
+<p><code class="docutils literal notranslate"><span class="pre">vat_ptr</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
 <p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="o">*</span><span class="n">search_pos</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
-<span class="k">while</span><span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_Detect</span><span class="p">(</span><span class="o">&amp;</span><span class="n">search_pos</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">))</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">search_pos</span><span class="o">...</span>
+<span class="n">void</span> <span class="o">*</span><span class="n">vat_ptr</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_Detect</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vat_ptr</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">)))</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">var_name</span> <span class="ow">or</span> <span class="n">vat_ptr</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -364,8 +366,8 @@ Additionally, the library supports accessing program data and various OS variabl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curr_search_posistion</strong> – Current offset in the VAT. </p></li>
-<li><p><strong>detection_string</strong> – String to search for (NULL to search for all). </p></li>
+<li><p><strong>vat_ptr</strong> – Current offset in the VAT. </p></li>
+<li><p><strong>detect_string</strong> – String to search for (NULL to search for all). </p></li>
 </ul>
 </dd>
 </dl>
@@ -373,13 +375,15 @@ Additionally, the library supports accessing program data and various OS variabl
 
 <dl class="cpp function">
 <dt id="_CPPv412ti_DetectVarPPvPKc7uint8_t">
-<span id="_CPPv312ti_DetectVarPPvPKc7uint8_t"></span><span id="_CPPv212ti_DetectVarPPvPKc7uint8_t"></span><span id="ti_DetectVar__voidPP.cCP.uint8_t"></span><span class="target" id="fileioc_8h_1aaa4c5a6c019de1510fac2a6bfa9269c7"></span>char *<code class="sig-name descname">ti_DetectVar</code><span class="sig-paren">(</span>void **<em>curr_search_posistion</em>, <em class="property">const</em> char *<em>detection_string</em>, uint8_t <em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectVarPPvPKc7uint8_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable; which can then be used with ti_OpenVar and other functions. </p>
-<p><code class="docutils literal notranslate"><span class="pre">search_pos</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
+<span id="_CPPv312ti_DetectVarPPvPKc7uint8_t"></span><span id="_CPPv212ti_DetectVarPPvPKc7uint8_t"></span><span id="ti_DetectVar__voidPP.cCP.uint8_t"></span><span class="target" id="fileioc_8h_1a9af05d2d65bd09cd9180cb70bce748ca"></span>char *<code class="sig-name descname">ti_DetectVar</code><span class="sig-paren">(</span>void **<em>vat_ptr</em>, <em class="property">const</em> char *<em>detect_string</em>, uint8_t <em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectVarPPvPKc7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable, which can then be used with <a class="reference internal" href="#fileioc_8h_1a75e6644985670553ff3e479d61ec788b"><span class="std std-ref">ti_OpenVar()</span></a> and other functions. </p>
+<p><code class="docutils literal notranslate"><span class="pre">vat_ptr</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
 <p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="o">*</span><span class="n">search_pos</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
-<span class="k">while</span><span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectVar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">search_pos</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="n">TI_PRGM_TYPE</span><span class="p">))</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">search_pos</span><span class="o">...</span>
+<span class="n">void</span> <span class="o">*</span><span class="n">vat_ptr</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectVar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vat_ptr</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="n">TI_PRGM_TYPE</span><span class="p">)))</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">var_name</span> <span class="ow">or</span> <span class="n">vat_ptr</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -391,8 +395,8 @@ Additionally, the library supports accessing program data and various OS variabl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curr_search_posistion</strong> – Current offset in the VAT. </p></li>
-<li><p><strong>detection_string</strong> – String to search for (NULL to search for all). </p></li>
+<li><p><strong>vat_ptr</strong> – Current offset in the VAT. </p></li>
+<li><p><strong>detect_string</strong> – String to search for (NULL to search for all). </p></li>
 <li><p><strong>var_type</strong> – Type of variable to detect. </p></li>
 </ul>
 </dd>
@@ -401,16 +405,19 @@ Additionally, the library supports accessing program data and various OS variabl
 
 <dl class="cpp function">
 <dt id="_CPPv412ti_DetectAnyPPvPKcP7uint8_t">
-<span id="_CPPv312ti_DetectAnyPPvPKcP7uint8_t"></span><span id="_CPPv212ti_DetectAnyPPvPKcP7uint8_t"></span><span id="ti_DetectAny__voidPP.cCP.uint8_tP"></span><span class="target" id="fileioc_8h_1a73c135a7580238aef96113a589b5dd42"></span>char *<code class="sig-name descname">ti_DetectAny</code><span class="sig-paren">(</span>void **<em>curr_search_posistion</em>, <em class="property">const</em> char *<em>detection_string</em>, uint8_t *<em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectAnyPPvPKcP7uint8_t" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable; which can then be used with ti_OpenVar and other functions. </p>
-<p><code class="docutils literal notranslate"><span class="pre">search_pos</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
-<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="o">*</span><span class="n">search_pos</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
-<span class="n">uint8_t</span> <span class="nb">type</span><span class="p">;</span>
-<span class="k">while</span><span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectAny</span><span class="p">(</span><span class="o">&amp;</span><span class="n">search_pos</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nb">type</span><span class="p">))</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">type</span> <span class="o">==</span> <span class="n">TI_PRGM_TYPE</span> <span class="o">||</span> <span class="nb">type</span> <span class="o">==</span> <span class="n">TI_PPRGM_TYPE</span><span class="p">)</span> <span class="p">{</span>
-   <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">search_pos</span><span class="o">...</span>
-  <span class="p">}</span>
+<span id="_CPPv312ti_DetectAnyPPvPKcP7uint8_t"></span><span id="_CPPv212ti_DetectAnyPPvPKcP7uint8_t"></span><span id="ti_DetectAny__voidPP.cCP.uint8_tP"></span><span class="target" id="fileioc_8h_1a790c564959b303bb05595dee8043789a"></span>char *<code class="sig-name descname">ti_DetectAny</code><span class="sig-paren">(</span>void **<em>vat_ptr</em>, <em class="property">const</em> char *<em>detect_string</em>, uint8_t *<em>var_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ti_DetectAnyPPvPKcP7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the name of the file(s) that contains the string as the first part of the variable, which can then be used with <a class="reference internal" href="#fileioc_8h_1a75e6644985670553ff3e479d61ec788b"><span class="std std-ref">ti_OpenVar()</span></a> and other functions. </p>
+<p><code class="docutils literal notranslate"><span class="pre">vat_ptr</span></code> should be set to NULL to begin a search, and is updated with each call.</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uint8_t</span> <span class="n">var_type</span><span class="p">;</span>
+<span class="n">char</span> <span class="o">*</span><span class="n">var_name</span><span class="p">;</span>
+<span class="n">void</span> <span class="o">*</span><span class="n">vat_ptr</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">var_name</span> <span class="o">=</span> <span class="n">ti_DetectAny</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vat_ptr</span><span class="p">,</span> <span class="s2">&quot;my_data&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var_type</span><span class="p">)))</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">var_type</span> <span class="o">==</span> <span class="n">TI_PRGM_TYPE</span> <span class="o">||</span> <span class="n">var_type</span> <span class="o">==</span> <span class="n">TI_PPRGM_TYPE</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">var_name</span> <span class="ow">or</span> <span class="n">vat_ptr</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -422,8 +429,8 @@ Additionally, the library supports accessing program data and various OS variabl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curr_search_posistion</strong> – Current offset in the VAT. </p></li>
-<li><p><strong>detection_string</strong> – String to search for (NULL to search for all). </p></li>
+<li><p><strong>vat_ptr</strong> – Current offset in the VAT. </p></li>
+<li><p><strong>detect_string</strong> – String to search for (NULL to search for all). </p></li>
 <li><p><strong>var_type</strong> – Type of variable found. </p></li>
 </ul>
 </dd>
@@ -864,7 +871,7 @@ Additionally, the library supports accessing program data and various OS variabl
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="CE C Libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="CE Libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="fontlibc.html" class="btn btn-neutral float-right" title="fontlibc.h" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
