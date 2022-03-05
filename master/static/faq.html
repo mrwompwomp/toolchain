@@ -148,17 +148,20 @@ Now, fasmg will execute in user mode under QEMU, allowing it to successfully com
 <li><p>Any external functions called from the assembly source must be listed as being <cite>extern</cite>.</p></li>
 </ul>
 <p>Below is an example assembly source file that relies on an external function:</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span>    <span class="nf">public</span>  <span class="no">_asm_func</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span>    assume  adl=1
 
-<span class="nl">_asm_func:</span>
-    <span class="nf">pop</span>     <span class="no">hl</span>
-    <span class="nf">pop</span>     <span class="no">de</span>
-    <span class="nf">push</span>    <span class="no">de</span>
-    <span class="nf">push</span>    <span class="no">hl</span>
-    <span class="nf">call</span>    <span class="no">_external_func</span>
-    <span class="nf">ret</span>
+    section .text
 
-    <span class="nf">extern</span>  <span class="no">_external_func</span>
+    public  _asm_func
+_asm_func:
+    pop     hl
+    pop     de
+    push    de
+    push    hl
+    call    _external_func
+    ret
+
+    extern  _external_func
 </pre></div>
 </div>
 <p>The C prototype is shown below:</p>
